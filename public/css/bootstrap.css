@@ -127,20 +127,20 @@ a:hover {
 }
 
 /* Bootstrap utility classes for comments */
-.comment-form {
+.comments-form {
     margin-bottom: 5%;
 }
 
-.comment {
+.comments {
     padding: 1%;
     margin-bottom: 1%;
 }
 
-.comment:nth-child(odd) {
+.comments:nth-child(odd) {
     background-color: #fff5eb;
 }
 
-.comment .meta {
+.comments .meta {
     font-size: 90%;
     margin-bottom: .5%;
     opacity: .6;

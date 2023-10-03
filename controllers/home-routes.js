@@ -15,7 +15,7 @@ router.get('/', (req, res) => {
       include: [
         {
           model: Comments,
-          attributes: ['id', 'Comments_text', 'post_id', 'user_id', 'created_at'],
+          attributes: ['id', 'comments_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username']
@@ -72,7 +72,7 @@ router.get('/login', (req, res) => {
       include: [
         {
           model: Comments,
-          attributes: ['id', 'Comments_text', 'post_id', 'user_id', 'created_at'],
+          attributes: ['id', 'comments_text', 'post_id', 'user_id', 'created_at'],
           include: {
             model: User,
             attributes: ['username']

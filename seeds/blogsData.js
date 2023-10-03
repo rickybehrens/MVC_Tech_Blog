@@ -1,33 +1,49 @@
-const { Painting } = require('../models');
+const { User, Post } = require('../models');
 
-const paintingdata = [
-  {
-    title: 'Blossoming Apricot',
-    artist: 'LedyX',
-    exhibition_date: 'March 30, 2018',
-    gallery_id: 1,
-    filename: '01-blossoming-apricot.jpg',
-    description:
-      'Branches with pink apricot blossoms against a blue background.',
-  },
-  {
-    title: 'Cosmos Flowers',
-    artist: 'WStudio',
-    exhibition_date: 'May 05, 2017',
-    gallery_id: 1,
-    filename: '02-cosmos-flowers.jpg',
-    description: 'Pink cosmos flowers against a blue sky.',
-  },
-  {
-    title: 'Sand + Sea = Summer',
-    artist: 'S_Photo',
-    exhibition_date: 'June 10, 2019',
-    gallery_id: 2,
-    filename: '03-sand-sea-summer.jpg',
-    description: 'Sandy beach with the blue sea and sky in the background.',
-  },
-];
+const seedBlogsAndUsers = async () => {
+  // Seed users
+  const userData = [
+    {
+      username: 'user1',
+      email: 'user1@example.com',
+      password: 'password1',
+    },
+    {
+      username: 'user2',
+      email: 'user2@example.com',
+      password: 'password2',
+    },
+    // Add more user objects as needed
+  ];
 
-const seedPaintings = () => Painting.bulkCreate(paintingdata);
+  const users = await User.bulkCreate(userData, {
+    individualHooks: true,
+    returning: true,
+  });
 
-module.exports = seedPaintings;
+  // Seed blog posts associated with users
+  const blogData = [
+    {
+      title: 'Sample Blog Post 1',
+      post_content: 'This is the content of the first blog post by user1.',
+      user_id: users[0].id,
+    },
+    {
+      title: 'Sample Blog Post 2',
+      post_content: 'This is the content of the second blog post by user1.',
+      user_id: users[0].id,
+    },
+    {
+      title: 'Sample Blog Post 3',
+      post_content: 'This is the content of the first blog post by user2.',
+      user_id: users[1].id,
+    },
+    // Add more blog post objects as needed
+  ];
+
+  await Post.bulkCreate(blogData);
+
+  console.log('\n----- USERS AND BLOG POSTS SEEDED -----\n');
+};
+
+seedBlogsAndUsers();
