@@ -4,7 +4,10 @@ const { Post, User, Comments } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', withAuth, (req, res) => {
-    Post.findAll({
+  console.log("User ID:", req.session.user_id);
+  console.log("GET Posts")
+
+  Post.findAll({
       where: {
         // use the ID from the session
         user_id: req.session.user_id
