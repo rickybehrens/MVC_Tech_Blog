@@ -1,0 +1,17 @@
+[
+    {
+      "user_id": 1,
+      "post_id": 1,
+      "comments_text": "I really liked this!"
+    },
+    {
+      "user_id": 2,
+      "post_id": 3,
+      "comments_text": "Couldn't agree with this more!"
+    },
+    {
+      "user_id": 3,
+      "post_id": 2,
+      "comments_text": "I would like to know what your opinion is on Nintendo"
+    }
+  ]
