@@ -1,3 +1,6 @@
+console.log("Who's your datty?");
+
+
 console.log('loggin out');
 
 const logout = async function () {
@@ -17,4 +20,5 @@ const logout = async function () {
   }
   
   document.querySelector('#logout').addEventListener('click', logout);
+
   
