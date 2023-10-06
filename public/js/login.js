@@ -1,5 +1,3 @@
-console.log('Hello');
-
 const loginFormHandler = async function (event) {
     event.preventDefault();
 
@@ -18,6 +16,7 @@ const loginFormHandler = async function (event) {
 
       if (response.ok) {
         document.location.replace('/dashboard');
+        console.log('you are logged in');
       } else {
         alert(response.statusText);
       }

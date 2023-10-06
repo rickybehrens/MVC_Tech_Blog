@@ -1,0 +1,176 @@
+/* Remove the universal box-sizing rule, as Bootstrap sets it by default */
+
+/* Bootstrap utility classes for body and html */
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #cbd0c6;
+    
+}
+
+/* Bootstrap utility class for links */
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #cbd0c6;
+}
+
+/* Bootstrap utility class for link hover */
+a:hover {
+    color: #0f43ed;
+}
+
+/* Bootstrap utility classes for buttons */
+/* Bootstrap utility classes for buttons */
+.btn {
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Bootstrap utility classes for margins and paddings */
+.m-0 {
+    margin: 0;
+}
+
+.p-0 {
+    padding: 0;
+}
+
+/* Bootstrap utility classes for form elements */
+.form-control {
+    padding: .5%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-control:focus {
+    outline: none;
+    border: 1px solid #3486eb;
+}
+
+/* Bootstrap utility class for textarea sizing */
+.textarea {
+    min-width: 40%;
+    min-height: 100px;
+}
+
+/* Bootstrap utility classes for form layout */
+.form-group {
+    margin-bottom: 2%;
+}
+
+/* Bootstrap utility class for block-level labels */
+.form-group label {
+    display: block;
+}
+
+/* Bootstrap utility class for layout containers */
+.container {
+    max-width: 1200px;
+}
+
+/* Bootstrap utility class for headers */
+/* Bootstrap utility class for headers */
+#header {
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+    background-color: #564647;
+    height: 900px;
+}
+
+/* Bootstrap utility class for main content */
+.main {
+    padding: 2% 4%;
+}
+
+/* Bootstrap utility classes for buttons */
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: #225ca3;
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+    margin-left: 16px;
+}
+
+.btn-no-style:hover {
+    background: none;
+    color: #3486eb;
+}
+
+/* Bootstrap utility classes for buttons */
+/* Bootstrap utility classes for buttons */
+.btn-danger {
+    background-color: #d41414;
+}
+
+.btn-danger:hover {
+    background-color: #ff643d;
+}
+
+/* Bootstrap utility classes for posts and comments */
+.post {
+    margin-bottom: 2%;
+    line-height: 150%;
+}
+
+.post .title span {
+    font-style: italic;
+    font-size: 90%;
+    color: #7d7d7d;
+}
+
+/* Bootstrap utility classes for comments */
+.comments-form {
+    margin-bottom: 5%;
+}
+
+.comments {
+    padding: 1%;
+    margin-bottom: 1%;
+}
+
+.comments:nth-child(odd) {
+    background-color: #fff5eb;
+}
+
+.comments .meta {
+    font-size: 90%;
+    margin-bottom: .5%;
+    opacity: .6;
+}
+
+/* Bootstrap utility classes for forms */
+.edit-post-form {
+    margin-bottom: 5%;
+}
+
+/* Bootstrap utility classes for footers */
+.footer {
+    border-top: 1px solid #ccc;
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    font-size: 110%;
+}
+
+/* Bootstrap utility classes for cards */
+.card {
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+/* Bootstrap utility classes for layout */
+.rows {
+    display: flex;
+    flex-direction: column;
+}
