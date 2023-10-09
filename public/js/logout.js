@@ -1,8 +1,3 @@
-console.log("Who's your datty?");
-
-
-console.log('loggin out');
-
 const logout = async function () {
   console.log("maybe this will log me out?");
   
