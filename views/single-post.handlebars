@@ -3,6 +3,12 @@
 
 <!-- displaying form and comments-->
 <!-- only display if logged in -->
+
+
+{{> comments post.comments}}
+
+
+
 {{#if loggedIn}}
 <form class="comments-form">
   <div>
@@ -16,8 +22,7 @@
 </form>
 {{/if}}
 
-{{> comments post.comments}}
 
 {{#if loggedIn}}
-<script src="./js/comments.js"></script>
+<script src="/js/comments.js"></script>
 {{/if}}

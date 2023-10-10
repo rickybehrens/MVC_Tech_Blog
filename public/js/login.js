@@ -15,8 +15,8 @@ const loginFormHandler = async function (event) {
       });
 
       if (response.ok) {
-        document.location.replace('/dashboard');
         console.log('you are logged in');
+        document.location.replace('/dashboard');
       } else {
         alert(response.statusText);
       }
