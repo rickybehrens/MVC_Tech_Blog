@@ -51,11 +51,12 @@ console.log(validPassword);
 router.post('/logout', (req, res) => {
   console.log('log out route');
 
-  if (req.session.logged_in) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
   } else {
+    console.log("What am I doing?")
     res.status(404).end();
   }
 });
