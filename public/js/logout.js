@@ -9,7 +9,6 @@ const logout = async function () {
   if (response.ok) { // Check if the response status is OK (2xx status code)
     // Redirect to the login page after successful logout
     document.location.replace('/login');
-    console.log('loggin out too'); // Log a message to the console
   } else {
     // Display an alert with the response status text if there is an error
     alert(response.statusText);

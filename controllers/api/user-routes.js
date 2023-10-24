@@ -68,7 +68,6 @@ router.post('/logout', (req, res) => {
     });
   } else {
     // If the user is not logged in, respond with an error message
-    console.log("What am I doing?")
     res.status(404).end();
   }
 });
