@@ -1,41 +1,42 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// create our Post model
+// Create our Post model
 class Post extends Model {}
 
-// create fields/columns for Post model
+// Define fields/columns for the Post model
 Post.init(
-    {
-      id: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-        primaryKey: true,
-        autoIncrement: true
-      },
-      title: {
-        type: DataTypes.STRING,
-        allowNull: false
-      },
-      post_content: {
-        type: DataTypes.TEXT,
-        allowNull: true
-      },
-      user_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id'
-        }
-      }
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,         // Primary key field
+      autoIncrement: true       // Auto-incrementing
     },
-    {
-      sequelize,
-      timestamps: true,
-      freezeTableName: true,
-      underscored: true,
-      modelName: 'post'
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false          // Title field, not nullable
+    },
+    post_content: {
+      type: DataTypes.TEXT,
+      allowNull: true             // Post content field, nullable
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',            // References the 'user' model
+        key: 'id'                 // References the 'id' field in the 'user' model
+      }
     }
-  );
+  },
+  {
+    sequelize,                    // The database connection (sequelize)
+    timestamps: true,             // Use timestamps (created_at and updated_at columns)
+    freezeTableName: true,       // Prevent table name pluralization
+    underscored: true,           // Use underscores instead of camelCase
+    modelName: 'post'            // Model name
+  }
+);
 
-  module.exports = Post;
+// Export the Post model
+module.exports = Post;
